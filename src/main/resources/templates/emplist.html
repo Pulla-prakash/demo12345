@@ -1,0 +1,31 @@
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+
+
+
+<div >
+        <div align="center">
+            <h2>EMPLOYEES DATA</h2>
+            <table border="1" class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Employee Salary</th>
+                        <th>EDIT</th>
+                        <th>DELETE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr th:each="employee : ${emplist}">
+                    <td th:text="${employee.name}"></td>
+                    <td th:text="${employee.salary}"></td>
+                    <td><a th:href="@{/employee/editEmployee/{id}(id=${employee.id})}">EDIT</a></td>
+                    <td><a th:href="@{/employee/deleteEmployee/{id}(id=${employee.id})}">DELETE</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>      
+    <p><a th:href="@{/employee/addEmployee}" >Add a new Employee</a></p>
+</div>
