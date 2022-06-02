@@ -15,6 +15,12 @@ public class JavaSpringDay5WithDataBaseApplication {
 	public static void main(String[] args) {
 	
 		SpringApplication.run(JavaSpringDay5WithDataBaseApplication.class, args);
+		
+		
+		
+		
+		
+		
 	}
 
 }
