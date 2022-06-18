@@ -23,6 +23,10 @@ public class EmployeeController {
 	
 	@GetMapping(value="/emplist")
 	public String getAllEmployees(Model model) {
+		
+		
+		
+		
 		List<Employee> list = employeeService.getALlEmployees();
 		model.addAttribute("emplist", list);
 		return "emplist";
